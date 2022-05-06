@@ -13,9 +13,14 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>library-system</name>
 	<description>Library system management</description>
+
 	<properties>
+		<sonar.organization>tofikzemoso</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+
 		<java.version>11</java.version>
 	</properties>
+
 
 	<dependencies>
 		<dependency>
