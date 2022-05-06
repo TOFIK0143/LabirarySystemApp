@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title> List Categories</title>
+    <!-- reference css file-->
+</head>
+<body>
+
+<div class="container">
+    <br><br>
+    <h3>Categories</h3>
+    <hr>
+    <a th:href="@{/addCategoryForm}" class="btn btn-primary btn-sm mb-3">Add Category</a>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="tempCat :${categories}">
+            <td th:text="${tempCat.Id}"></td>
+            <td><a th:href="@{/listBooks(categoryId=${tempCat.id})}" th:text="${tempCat.Name}"></a></td>
+            <!-- add update button/link   <td th:text="${tempCat.Name}"></td>-->
+            <td>
+                <a th:href="@{/showFormForUpdateCategory(categoryId=${tempCat.id})}"
+                   class="btn btn-info btn-sm">Update</a>
+
+                <a th:href="@{/deleteCategory(categoryId=${tempCat.id})}"
+                   class="btn btn-danger btn-sm"
+                   onclick="if (!(confirm('Are you sure you want to delete this book?'))) return false">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+
+    </table>
+    <br><br>
+    <a th:href="@{/}">Go Home</a>
+
+
+</div>
+
+</body>
+
+</html>
+
