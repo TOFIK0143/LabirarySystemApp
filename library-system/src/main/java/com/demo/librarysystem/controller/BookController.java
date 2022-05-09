@@ -30,7 +30,8 @@ public class BookController {
     @Autowired
     private ModelMapper modelMapper;
 
-
+    private static final String ADD_BOOK_FORM ="add-book-form";
+    private static final String CATEGORIES_ATTRIBUTE ="categories";
 
 
 
@@ -53,7 +54,7 @@ public class BookController {
         }
 
         List<CategoryDto> categories=categoryService.findAll();
-        model.addAttribute("categories",categories);
+        model.addAttribute("CATEGORIES_ATTRIBUTE",categories);
 
 
         return "list-books";
@@ -66,19 +67,19 @@ public class BookController {
         model.addAttribute("book",bookDto);
 
         List<CategoryDto> categories=categoryService.findAll();
-        model.addAttribute( "categories",categories);
-        return "add-book-form";
+        model.addAttribute( "CATEGORIES_ATTRIBUTE",categories);
+        return "ADD_BOOK_FORM";
     }
 
     @PostMapping("/saveBook")
-    public String saveBook(@Valid @ModelAttribute("book") Book bookDto, BindingResult bindingResult,Model model)
+    public String saveBook(@Valid @ModelAttribute("book") BookDto bookDto, BindingResult bindingResult,Model model)
     {
         if(bindingResult.hasErrors())
         {
             model.addAttribute("book",bookDto);
             List<CategoryDto> categories=categoryService.findAll();
-            model.addAttribute("categories",categories);
-            return "add-book-form";
+            model.addAttribute("CATEGORIES_ATTRIBUTE",categories);
+            return "ADD_BOOK_FORM";
         }
         Book book= new Book(bookDto.getName(),bookDto.getAuthor(),bookDto.getQuantity(),bookDto.getCategory());
         book.setId(bookDto.getId());
@@ -93,9 +94,9 @@ public class BookController {
         BookDto book=bookService.findById(id);
         model.addAttribute("book",book);
         List<CategoryDto> categories=categoryService.findAll();
-        model.addAttribute("categories",categories);
+        model.addAttribute("CATEGORIES_ATTRIBUTE",categories);
 
-        return "add-book-form";
+        return "ADD_BOOK_FORM";
     }
 
     @GetMapping("/deleteBook")

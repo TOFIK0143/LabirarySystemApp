@@ -48,7 +48,7 @@ public class CategoryController {
     }
 
     @PostMapping("/saveCategory")
-    public String saveCategory(@Valid @ModelAttribute("category") Category category, BindingResult bindingResult)
+    public String saveCategory(@Valid @ModelAttribute("category") CategoryDto CategoryDto, BindingResult bindingResult)
     {
         if(bindingResult.hasErrors())
         {
@@ -56,13 +56,13 @@ public class CategoryController {
         }
         List<CategoryDto> categories = categoryService.findAll();
         for (CategoryDto tempCategory: categories) {
-            if (tempCategory.getName().equals(category.getName()))
+            if (tempCategory.getName().equals(CategoryDto.getName()))
             {
                 return "error-already-added";
             }
         }
-        Category category1 = new Category(category.getName());
-        category1.setId(category.getId());
+        Category category1 = new Category(CategoryDto.getName());
+        category1.setId(CategoryDto.getId());
         categoryService.save(category1);
 
         return "redirect:/listCategories";
