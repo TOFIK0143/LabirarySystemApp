@@ -1,1 +1,2 @@
-com.demo.librarysystem.service.BookServiceImpl#save(Lcom/demo/librarysystem/entity/Book;)V
+com.demo.librarysystem.service.BookServiceImpl#findAll()Ljava/util/List;
+java.util.stream.Collectors#toList()Ljava/util/stream/Collector;

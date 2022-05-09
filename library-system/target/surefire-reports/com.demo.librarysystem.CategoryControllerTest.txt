@@ -1,9 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.demo.librarysystem.CategoryControllerTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0 s <<< FAILURE! - in com.demo.librarysystem.CategoryControllerTest
-initializationError  Time elapsed: 0 s  <<< ERROR!
-org.junit.runners.model.InvalidTestClassError: 
-Invalid test class 'com.demo.librarysystem.CategoryControllerTest':
-  1. No runnable methods
-
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 s - in com.demo.librarysystem.CategoryControllerTest

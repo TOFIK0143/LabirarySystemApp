@@ -1,1 +1,1 @@
-com.demo.librarysystem.custom.exceptions.BookNotFoundException#<init>(Ljava/lang/String;)V
+com.demo.librarysystem.exceptions.BookNotFoundException#<init>(Ljava/lang/String;)V

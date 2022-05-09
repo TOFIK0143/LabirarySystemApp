@@ -1,175 +1,44 @@
 
-´com.demo.librarysystem.controller.CategoryController#saveCategory(Lcom/demo/librarysystem/entity/Category;Lorg/springframework/validation/BindingResult;)Ljava/lang/String;Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java3 3("startingBlock*€
-2Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java: :(%Œ
-À
-Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java: :(%6
-tempCategory&com.demo.librarysystem.dto.CategoryDto"__id*
-""Ù
-Ò
-Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java: :(%6
-tempCategory&com.demo.librarysystem.dto.CategoryDto"
-__arrayGet*
-
-
-categoriesjava.util.List*
-""*	
-2
-3
-1*©
-3Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java= =(,"û
-Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java= =(-
-error-already-added*â
+vcom.demo.librarysystem.controller.CategoryController#addCategoryForm(Lorg/springframework/ui/Model;)Ljava/lang/String;Ç
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java+ +(!"startingBlock*ﬁ
 startingBlockÇ
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java3 3(qi
-g
-
-__unknown_file (
-%8"__id*?*=
-2
-category&com.demo.librarysystem.entity.Category"
-booksh
-f
-
-__unknown_file (
-%9"__id*>*<
-2
-category&com.demo.librarysystem.entity.Category"
-nameø
-º
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java+! +(.¬ø
 Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java3 3(%
-%10"
-__annotate*
-javax.validation.Valid*
-
-%9ﬂ
-‹
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java+" +(-%
+modelorg.springframework.ui.Model"java.util.HashMap*
+1*‰	
+1Ç
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java-" -(3Õ
+ 
 Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java3& 3(A
-%11"
-__annotate*:8
-6org.springframework.web.bind.annotation.ModelAttribute*
-
-%9Ê
-„
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java- -(45
+categoryDto&com.demo.librarysystem.dto.CategoryDto"__id*
+""¶
+£
 Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java3K 3(S<
-2
-category&com.demo.librarysystem.entity.Category"
-name"__annotation*
-
-%10*
-
-%11ø
-º
-Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java3 3(%
-%12"
-__annotate*
-javax.validation.Valid*
-
-%8ﬂ
-‹
-Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java3& 3(A
-%13"
-__annotate*:8
-6org.springframework.web.bind.annotation.ModelAttribute*
-
-%8Á
-‰
-Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java3K 3(S=
-2
-category&com.demo.librarysystem.entity.Category"
-books"__annotation*
-
-%12*
-
-%13*
-8*ò
-6Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java9' 9(6ì
-ê
-Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java9' 9(64
-%2.com.demo.librarysystem.service.CategoryService"__id*M*K6
-4com.demo.librarysystem.controller.CategoryController"
-categoryService´®
-Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java9' 9(@
-%3java.util.List"Hcom.demo.librarysystem.service.CategoryService#findAll()Ljava/util/List;*6
-4
-%2.com.demo.librarysystem.service.CategoryService2	findAll()ƒ
-¡
-Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java9 9(A
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java. .(2"
+%0org.springframework.ui.Model"__mapSet*'
+%
+modelorg.springframework.ui.Model*
 
-categoriesjava.util.List"__id*
-
-%3java.util.List*
-2*€
-7Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java7 7($Æ
+category*7
+5
+categoryDto&com.demo.librarysystem.dto.CategoryDtoÆ
 ´
 Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java7 7($
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java/ /( 
 %1java.lang.String"__id*
-"""ü
+""ç
+ä
 Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java7 7(%
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java/ /( 
+%2"template!add-category-form*8"6
+4com.demo.librarysystem.controller.CategoryController*'
+%
+modelorg.springframework.ui.Model"ü
+Ç
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java/ /(!
 
-%1java.lang.String*¨
-8Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java5 5(ôñ
-Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java5 5($
-%0boolean"2org.springframework.validation.Errors#hasErrors()Z*?
-=
-bindingResult,org.springframework.validation.BindingResult2hasErrors()*
-6
-7*æ
-1Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java@* @(2ﬁ€
-Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java@! @(),
-%4&com.demo.librarysystem.entity.Category"&com.demo.librarysystem.entity.Categoryä
-á
-Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java@ @(=
-%5"Bcom.demo.librarysystem.entity.Category#<init>(Ljava/lang/String;)V*.
-,
-%4&com.demo.librarysystem.entity.Category*
-""Û
-
-Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java@ @(>3
-	category1&com.demo.librarysystem.entity.Category"__id*.
-,
-%4&com.demo.librarysystem.entity.Categoryì
-ê
-Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.javaB B(4
-%6.com.demo.librarysystem.service.CategoryService"__id*M*K6
-4com.demo.librarysystem.controller.CategoryController"
-categoryServiceìê
-Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.javaB B('
-
-%7void"^com.demo.librarysystem.service.CategoryService#save(Lcom/demo/librarysystem/entity/Category;)V*6
-4
-%6.com.demo.librarysystem.service.CategoryService*5
-3
-	category1&com.demo.librarysystem.entity.Category2.save(Lcom/demo/librarysystem/entity/Category;)"£
-Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.javaD D(*
-redirect:/listCategories:2
-category&com.demo.librarysystem.entity.Category:=
-bindingResult,org.springframework.validation.BindingResultB86
+%1java.lang.String:%
+modelorg.springframework.ui.ModelB86
 4com.demo.librarysystem.controller.CategoryController

@@ -1,1 +1,1 @@
-com.demo.librarysystem.custom.exceptions.CategoryNotFoundException#instance-init#
+com.demo.librarysystem.entity.Book#setName(Ljava/lang/String;)V

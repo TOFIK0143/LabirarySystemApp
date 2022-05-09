@@ -1,1 +1,1 @@
-com.demo.librarysystem.entity.Book#getName()Ljava/lang/String;
+com.demo.librarysystem.service.CategoryServiceImpl#convertToDTO(Lcom/demo/librarysystem/entity/Category;)Lcom/demo/librarysystem/dto/CategoryDto;

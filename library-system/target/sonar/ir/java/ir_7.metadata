@@ -1,3 +1,1 @@
-com.demo.librarysystem.controller.CategoryController#addCategoryForm(Lorg/springframework/ui/Model;)Ljava/lang/String;
-null
-com.demo.librarysystem.dto.CategoryDto#instance-init#
+com.demo.librarysystem.controller.CategoryController#instance-init#

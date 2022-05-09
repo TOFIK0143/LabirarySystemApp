@@ -1,1 +1,1 @@
-com.demo.librarysystem.custom.exceptions.BookNotFoundException#instance-init#
+com.demo.librarysystem.exceptions.BookNotFoundException#instance-init#

@@ -1,1 +1,2 @@
-com.demo.librarysystem.controller.CategoryController#listCategories(Lorg/springframework/ui/Model;)Ljava/lang/String;
+com.demo.librarysystem.LibrarySystemApplication#main([Ljava/lang/String;)V
+org.springframework.boot.SpringApplication#run(Ljava/lang/Class;[Ljava/lang/String;)Lorg/springframework/context/ConfigurableApplicationContext;

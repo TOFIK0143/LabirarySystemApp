@@ -1,2 +1,1 @@
-com.demo.librarysystem.service.CategoryServiceImpl#findAll()Ljava/util/List;
-java.util.stream.Collectors#toList()Ljava/util/stream/Collector;
+com.demo.librarysystem.entity.Category#<init>(Ljava/lang/String;)V

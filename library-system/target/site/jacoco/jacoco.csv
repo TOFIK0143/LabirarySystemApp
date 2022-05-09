@@ -1,6 +1,6 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-library-system,com.demo.librarysystem.custom.exceptions,CategoryNotFoundException,4,0,0,0,2,0,1,0,1,0
-library-system,com.demo.librarysystem.custom.exceptions,BookNotFoundException,4,0,0,0,2,0,1,0,1,0
+library-system,com.demo.librarysystem.exceptions,CategoryNotFoundException,4,0,0,0,2,0,1,0,1,0
+library-system,com.demo.librarysystem.exceptions,BookNotFoundException,4,0,0,0,2,0,1,0,1,0
 library-system,com.demo.librarysystem,LibrarySystemApplication,5,7,0,0,2,2,1,2,1,2
 library-system,com.demo.librarysystem.controller,CategoryController,73,14,6,0,19,4,7,2,4,2
 library-system,com.demo.librarysystem.controller,BookController,127,3,4,0,30,1,8,1,6,1

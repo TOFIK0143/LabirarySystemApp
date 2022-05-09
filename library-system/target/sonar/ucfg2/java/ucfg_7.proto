@@ -1,23 +1,58 @@
 
-Xcom.demo.librarysystem.controller.CategoryController#deleteCategory(I)Ljava/lang/String;Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.javaP P( "1*È
+Åcom.demo.librarysystem.controller.CategoryController#showFormForUpdateCategory(ILorg/springframework/ui/Model;)Ljava/lang/String;Ç
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.javaH H(+"startingBlock*ﬁ
+startingBlockÇ
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.javaH+ H(\¬ø
+Ç
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.javaHP H([%
+modelorg.springframework.ui.Model"java.util.HashMap*
+1*Ü
 1Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.javaR R(ì
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.javaJ J(,ì
 ê
 Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.javaR R(4
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.javaJ J(,4
 %0.com.demo.librarysystem.service.CategoryService"__id*M*K6
 4com.demo.librarysystem.controller.CategoryController"
-categoryService¢ü
+categoryServiceÁ‰
 Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.javaR R(&
-
-%1void"=com.demo.librarysystem.service.CategoryService#deleteById(I)V*6
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.javaJ J(9,
+%1&com.demo.librarysystem.dto.CategoryDto"bcom.demo.librarysystem.service.CategoryService#findById(I)Lcom/demo/librarysystem/dto/CategoryDto;*6
 4
 %0.com.demo.librarysystem.service.CategoryService*
-""2deleteById(I)"£
+""2findById(I)Ú
+Ô
 Ç
-x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.javaS S(*
-redirect:/listCategories:
-""B86
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.javaJ J(:2
+category&com.demo.librarysystem.dto.CategoryDto"__id*.
+,
+%1&com.demo.librarysystem.dto.CategoryDto£
+†
+Ç
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.javaK K(/"
+%2org.springframework.ui.Model"__mapSet*'
+%
+modelorg.springframework.ui.Model*
+
+category*4
+2
+category&com.demo.librarysystem.dto.CategoryDtoÆ
+´
+Ç
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.javaL L( 
+%3java.lang.String"__id*
+""ç
+ä
+Ç
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.javaL L( 
+%4"template!add-category-form*8"6
+4com.demo.librarysystem.controller.CategoryController*'
+%
+modelorg.springframework.ui.Model"ü
+Ç
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.javaL L(!
+
+%3java.lang.String:
+"":%
+modelorg.springframework.ui.ModelB86
 4com.demo.librarysystem.controller.CategoryController

@@ -1,4 +1,3 @@
-com.demo.librarysystem.service.BookServiceImpl#convertToEntity(Lcom/demo/librarysystem/dto/BookDto;)Lcom/demo/librarysystem/entity/Book;
-null
-com.demo.librarysystem.entity.Category#instance-init#
-com.demo.librarysystem.entity.Book#instance-init#
+com.demo.librarysystem.service.BookServiceImpl#findBookByCategory(I)Ljava/util/List;
+java.util.ArrayList#<init>()V
+java.util.ArrayList#instance-init#

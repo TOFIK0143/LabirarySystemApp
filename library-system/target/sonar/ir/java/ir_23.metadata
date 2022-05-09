@@ -1,1 +1,4 @@
-com.demo.librarysystem.entity.Category#<init>(Ljava/lang/String;)V
+com.demo.librarysystem.service.BookServiceImpl#convertToEntity(Lcom/demo/librarysystem/dto/BookDto;)Lcom/demo/librarysystem/entity/Book;
+null
+com.demo.librarysystem.entity.Category#instance-init#
+com.demo.librarysystem.entity.Book#instance-init#

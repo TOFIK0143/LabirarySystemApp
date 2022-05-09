@@ -1,3 +1,1 @@
-com.demo.librarysystem.service.BookServiceImpl#findBookByCategory(I)Ljava/util/List;
-java.util.ArrayList#<init>()V
-java.util.ArrayList#instance-init#
+com.demo.librarysystem.service.BookServiceImpl#save(Lcom/demo/librarysystem/entity/Book;)V

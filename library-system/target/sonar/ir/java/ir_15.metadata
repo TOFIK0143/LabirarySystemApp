@@ -1,2 +1,1 @@
-com.demo.librarysystem.service.BookServiceImpl#findAll()Ljava/util/List;
-java.util.stream.Collectors#toList()Ljava/util/stream/Collector;
+com.demo.librarysystem.dto.CategoryDto#<init>(Ljava/lang/String;)V

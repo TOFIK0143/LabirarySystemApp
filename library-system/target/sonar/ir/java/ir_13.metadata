@@ -1,1 +1,1 @@
-com.demo.librarysystem.dto.CategoryDto#<init>(Ljava/lang/String;)V
+com.demo.librarysystem.dao.BookRepository#instance-init#
