@@ -1,0 +1,172 @@
+
+Äcom.demo.librarysystem.controller.BookController#listBooks(Ljava/util/Optional;Lorg/springframework/ui/Model;)Ljava/lang/String;~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java& &("startingBlock*‡
+2~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java2 2( Ç
+ˇ
+~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java2 2( 0
+%4*com.demo.librarysystem.service.BookService"__id*E*C2
+0com.demo.librarysystem.controller.BookController"
+bookServiceÛ
+~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java24 2(D
+%5java.lang.Integer"*java.util.Optional#get()Ljava/lang/Object;*"
+ 
+
+categoryIdjava.util.Optional2get()‘—
+~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java24 2(O	
+%6int"java.lang.Integer#intValue()I*
+
+%5java.lang.Integer2
+intValue()√¿
+~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java2 2(P
+%7java.util.List"Pcom.demo.librarysystem.service.BookService#findBookByCategory(I)Ljava/util/List;*2
+0
+%4*com.demo.librarysystem.service.BookService*
+	
+%6int2findBookByCategory(I)∫
+∑
+~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java2 2(P
+booksjava.util.List"__id*
+
+%7java.util.ListÄ
+˝
+~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java3 3(-"
+%8org.springframework.ui.Model"__mapSet*'
+%
+modelorg.springframework.ui.Model*	
+books*
+
+booksjava.util.List*
+1*
+3~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java- -(Ç
+ˇ
+~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java- -(0
+%1*com.demo.librarysystem.service.BookService"__id*E*C2
+0com.demo.librarysystem.controller.BookController"
+bookServiceûõ
+~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java- -()
+%2java.util.List"Dcom.demo.librarysystem.service.BookService#findAll()Ljava/util/List;*2
+0
+%1*com.demo.librarysystem.service.BookService2	findAll()ª
+∏
+~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java- -()
+books1java.util.List"__id*
+
+%2java.util.ListÅ
+˛
+~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java. .(."
+%3org.springframework.ui.Model"__mapSet*'
+%
+modelorg.springframework.ui.Model*	
+books*
+
+books1java.util.List*
+1*‘
+startingBlock~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java& &(bX
+V
+
+__unknown_file (
+%13"__id*-*+
+ 
+
+categoryIdjava.util.Optional"
+EMPTYŸ
+÷
+~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java& &(7
+%14"
+__annotate*86
+4org.springframework.web.bind.annotation.RequestParam*
+
+%13«
+ƒ
+~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java&J &(T+
+ 
+
+categoryIdjava.util.Optional"
+EMPTY"__annotation*
+
+%14Ω∫
+~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java&V &(a%
+modelorg.springframework.ui.Model"java.util.HashMap*
+4*…
+4~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java' '(™
+ß
+~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java' '(
+booksjava.util.List"__id*
+""´
+®
+~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java) )(
+books1java.util.List"__id*
+""‡›
+~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java+ +(
+%0boolean"java.util.Optional#isEmpty()Z*"
+ 
+
+categoryIdjava.util.Optional2	isEmpty()*
+2
+3*ü
+1~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java7% 7(4ä
+á
+~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java7% 7(44
+%9.com.demo.librarysystem.service.CategoryService"__id*I*G2
+0com.demo.librarysystem.controller.BookController"
+categoryServiceß§
+~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java7% 7(>
+%10java.util.List"Hcom.demo.librarysystem.service.CategoryService#findAll()Ljava/util/List;*6
+4
+%9.com.demo.librarysystem.service.CategoryService2	findAll()¿
+Ω
+~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java7 7(?
+
+categoriesjava.util.List"__id*
+
+%10java.util.Listã
+à
+~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java8 8(3#
+%11org.springframework.ui.Model"__mapSet*'
+%
+modelorg.springframework.ui.Model*
+
+categories*
+
+
+categoriesjava.util.List˛
+˚
+~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java; ;(
+%12"template!list-books*4"2
+0com.demo.librarysystem.controller.BookController*'
+%
+modelorg.springframework.ui.Model"ê
+~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.java; ;(
+
+list-books: 
+
+categoryIdjava.util.Optional:%
+modelorg.springframework.ui.ModelB42
+0com.demo.librarysystem.controller.BookController

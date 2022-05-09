@@ -1,0 +1,23 @@
+
+Pcom.demo.librarysystem.controller.BookController#deleteBook(I)Ljava/lang/String;~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaf f("1*¼
+1~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javah h(‚
+ÿ
+~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javah h(0
+%0*com.demo.librarysystem.service.BookService"__id*E*C2
+0com.demo.librarysystem.controller.BookController"
+bookService•’
+~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javah h("
+
+%1void"9com.demo.librarysystem.service.BookService#deleteById(I)V*2
+0
+%0*com.demo.librarysystem.service.BookService*
+""2deleteById(I)"™
+~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javai i(%
+redirect:/listBooks:
+""B42
+0com.demo.librarysystem.controller.BookController

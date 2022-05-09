@@ -22,7 +22,7 @@ import static org.mockito.Mockito.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class CategoryControllerTest {
+class CategoryControllerTest {
 
     @Autowired
     private BookService bookService;
@@ -39,14 +39,16 @@ public class CategoryControllerTest {
     @MockBean
     private CategoryRepository categoryRepository;
 
+    public CategoryControllerTest() {
 
+    }
 
     @Test
     void ListAllCategoriesControllerTest() {
         when(categoryService.findAll()).thenReturn(
                 Stream.of(
                                 new CategoryDto("Science"),
-                                new CategoryDto("Astronomy")
+                                new CategoryDto("History")
                         )
                         .collect(Collectors.toList()));
 
@@ -56,14 +58,14 @@ public class CategoryControllerTest {
 
     @Test
     void saveCategoryControllerTest() {
-        Category category = new Category("Computers");
+        Category category = new Category("Novel");
         categoryService.save(category);
         verify(categoryRepository, times(1)).save(category);
     }
 
     @Test
     void deleteCategoryControllerTest() {
-        int id = 1;
+        int id = 3;
         categoryService.deleteById(id);
         verify(categoryRepository, times(1)).deleteById(id);
     }

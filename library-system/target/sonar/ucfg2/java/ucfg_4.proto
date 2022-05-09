@@ -1,0 +1,44 @@
+
+vcom.demo.librarysystem.controller.CategoryController#addCategoryForm(Lorg/springframework/ui/Model;)Ljava/lang/String;Ç
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java+ +(!"startingBlock*ﬁ
+startingBlockÇ
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java+! +(.¬ø
+Ç
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java+" +(-%
+modelorg.springframework.ui.Model"java.util.HashMap*
+1*‰	
+1Ç
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java-" -(3Õ
+ 
+Ç
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java- -(45
+categoryDto&com.demo.librarysystem.dto.CategoryDto"__id*
+""¶
+£
+Ç
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java. .(2"
+%0org.springframework.ui.Model"__mapSet*'
+%
+modelorg.springframework.ui.Model*
+
+category*7
+5
+categoryDto&com.demo.librarysystem.dto.CategoryDtoÆ
+´
+Ç
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java/ /( 
+%1java.lang.String"__id*
+""ç
+ä
+Ç
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java/ /( 
+%2"template!add-category-form*8"6
+4com.demo.librarysystem.controller.CategoryController*'
+%
+modelorg.springframework.ui.Model"ü
+Ç
+x/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/CategoryController.java/ /(!
+
+%1java.lang.String:%
+modelorg.springframework.ui.ModelB86
+4com.demo.librarysystem.controller.CategoryController

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CategoryController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">library-system</a> &gt; <a href="index.source.html" class="el_package">com.demo.librarysystem.controller</a> &gt; <span class="el_source">CategoryController.java</span></div><h1>CategoryController.java</h1><pre class="source lang-java linenums">package com.demo.librarysystem.controller;
+
+
+import com.demo.librarysystem.dto.CategoryDto;
+import com.demo.librarysystem.entity.Category;
+import com.demo.librarysystem.service.BookService;
+import com.demo.librarysystem.service.CategoryService;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.util.List;
+
+@EnableWebSecurity
+@Controller
+<span class="fc" id="L21">public class CategoryController {</span>
+
+    @Autowired
+    private BookService bookService;
+
+    @Autowired
+    private CategoryService categoryService;
+
+    @Autowired
+    private ModelMapper modelMapper;
+
+   private static final String ADD_CATEGORY_FORM =&quot;add-category-form&quot;;
+
+    @GetMapping(&quot;/listCategories&quot;)
+    public String listCategories(Model model)
+    {
+<span class="nc" id="L37">        List&lt;CategoryDto&gt; categories=categoryService.findAll();</span>
+<span class="nc" id="L38">        model.addAttribute(&quot;categories&quot;,categories);</span>
+<span class="nc" id="L39">        return &quot;list-categories&quot;;</span>
+    }
+
+    @GetMapping(&quot;/addCategoryForm&quot;)
+    public String addCategoryForm(Model model)
+    {
+<span class="fc" id="L45">        CategoryDto categoryDto = new CategoryDto();</span>
+<span class="fc" id="L46">        model.addAttribute(&quot;category&quot;,categoryDto);</span>
+<span class="fc" id="L47">        return ADD_CATEGORY_FORM;</span>
+    }
+
+    @PostMapping(&quot;/saveCategory&quot;)
+    public String saveCategory(@Valid @ModelAttribute(&quot;category&quot;) Category category, BindingResult bindingResult)
+    {
+<span class="nc bnc" id="L53" title="All 2 branches missed.">        if(bindingResult.hasErrors())</span>
+        {
+<span class="nc" id="L55">            return ADD_CATEGORY_FORM;</span>
+        }
+<span class="nc" id="L57">        List&lt;CategoryDto&gt; categories = categoryService.findAll();</span>
+<span class="nc bnc" id="L58" title="All 2 branches missed.">        for (CategoryDto tempCategory: categories) {</span>
+<span class="nc bnc" id="L59" title="All 2 branches missed.">            if (tempCategory.getName().equals(category.getName()))</span>
+            {
+<span class="nc" id="L61">                return &quot;error-already-added&quot;;</span>
+            }
+<span class="nc" id="L63">        }</span>
+<span class="nc" id="L64">        Category category1 = new Category(category.getName());</span>
+<span class="nc" id="L65">        category1.setId(category.getId());</span>
+<span class="nc" id="L66">        categoryService.save(category1);</span>
+
+<span class="nc" id="L68">        return &quot;redirect:/listCategories&quot;;</span>
+    }
+
+    @GetMapping(&quot;/showFormForUpdateCategory&quot;)
+    public String showFormForUpdateCategory(@RequestParam(&quot;categoryId&quot;) int id, Model model)
+    {
+<span class="nc" id="L74">        CategoryDto category=categoryService.findById(id);</span>
+<span class="nc" id="L75">        model.addAttribute(&quot;category&quot;,category);</span>
+<span class="nc" id="L76">        return ADD_CATEGORY_FORM;</span>
+    }
+
+    @GetMapping(&quot;/deleteCategory&quot;)
+    public String deleteCategory(@RequestParam(&quot;categoryId&quot;) int id)
+    {
+<span class="nc" id="L82">        categoryService.deleteById(id);</span>
+<span class="nc" id="L83">        return &quot;redirect:/listCategories&quot;;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

@@ -17,7 +17,7 @@
 	<properties>
 		<sonar.organization>tofikzemoso</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
-
+		<sonar.projectKey>TofikZeMoSo_Library-System</sonar.projectKey>
 		<java.version>11</java.version>
 	</properties>
 

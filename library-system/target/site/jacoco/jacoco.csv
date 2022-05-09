@@ -1,0 +1,12 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+library-system,com.demo.librarysystem.custom.exceptions,CategoryNotFoundException,4,0,0,0,2,0,1,0,1,0
+library-system,com.demo.librarysystem.custom.exceptions,BookNotFoundException,4,0,0,0,2,0,1,0,1,0
+library-system,com.demo.librarysystem,LibrarySystemApplication,5,7,0,0,2,2,1,2,1,2
+library-system,com.demo.librarysystem.controller,CategoryController,73,14,6,0,19,4,7,2,4,2
+library-system,com.demo.librarysystem.controller,BookController,127,3,4,0,30,1,8,1,6,1
+library-system,com.demo.librarysystem.entity,Book,183,33,34,0,3,12,26,7,9,7
+library-system,com.demo.librarysystem.entity,Category,126,18,24,0,1,7,19,5,7,5
+library-system,com.demo.librarysystem.dto,CategoryDto,132,24,24,0,2,5,19,6,7,6
+library-system,com.demo.librarysystem.dto,BookDto,163,53,34,0,0,13,21,12,4,12
+library-system,com.demo.librarysystem.service,BookServiceImpl,51,60,5,1,12,14,5,6,2,6
+library-system,com.demo.librarysystem.service,CategoryServiceImpl,5,51,1,1,1,11,1,6,0,6

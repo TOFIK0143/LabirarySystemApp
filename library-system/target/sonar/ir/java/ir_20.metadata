@@ -1,0 +1,4 @@
+com.demo.librarysystem.service.BookServiceImpl#convertToDTO(Lcom/demo/librarysystem/entity/Book;)Lcom/demo/librarysystem/dto/BookDto;
+null
+com.demo.librarysystem.dto.BookDto#instance-init#
+com.demo.librarysystem.entity.Category#instance-init#

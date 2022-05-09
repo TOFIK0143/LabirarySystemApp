@@ -1,0 +1,4 @@
+com.demo.librarysystem.controller.BookController#listBooks(Ljava/util/Optional;Lorg/springframework/ui/Model;)Ljava/lang/String;
+java.util.Optional#isEmpty()Z
+java.lang.Integer#intValue()I
+java.util.Optional#get()Ljava/lang/Object;

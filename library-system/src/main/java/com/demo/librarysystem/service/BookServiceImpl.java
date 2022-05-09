@@ -1,7 +1,7 @@
 package com.demo.librarysystem.service;
 
 import com.demo.librarysystem.dao.BookRepository;
-import com.demo.librarysystem.custom.exceptions.BookNotFoundException;
+import com.demo.librarysystem.exceptions.BookNotFoundException;
 import com.demo.librarysystem.dto.BookDto;
 import com.demo.librarysystem.dto.CategoryDto;
 import com.demo.librarysystem.entity.Book;

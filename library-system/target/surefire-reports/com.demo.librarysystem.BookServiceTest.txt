@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: com.demo.librarysystem.BookServiceTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.015 s <<< FAILURE! - in com.demo.librarysystem.BookServiceTest
+initializationError  Time elapsed: 0.011 s  <<< ERROR!
+org.junit.runners.model.InvalidTestClassError: 
+Invalid test class 'com.demo.librarysystem.BookServiceTest':
+  1. No runnable methods
+

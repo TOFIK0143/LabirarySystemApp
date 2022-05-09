@@ -1,0 +1,6 @@
+com.demo.librarysystem.service.BookServiceImpl#findById(I)Lcom/demo/librarysystem/dto/BookDto;
+java.util.Optional#isPresent()Z
+com.demo.librarysystem.service.BookServiceImpl#convertToDTO(Lcom/demo/librarysystem/entity/Book;)Lcom/demo/librarysystem/dto/BookDto;
+com.demo.librarysystem.custom.exceptions.BookNotFoundException#instance-init#
+com.demo.librarysystem.custom.exceptions.BookNotFoundException#<init>(Ljava/lang/String;)V
+java.util.Optional#get()Ljava/lang/Object;

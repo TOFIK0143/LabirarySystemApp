@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BookServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">library-system</a> &gt; <a href="index.source.html" class="el_package">com.demo.librarysystem.service</a> &gt; <span class="el_source">BookServiceImpl.java</span></div><h1>BookServiceImpl.java</h1><pre class="source lang-java linenums">package com.demo.librarysystem.service;
+
+import com.demo.librarysystem.dao.BookRepository;
+import com.demo.librarysystem.custom.exceptions.BookNotFoundException;
+import com.demo.librarysystem.dto.BookDto;
+import com.demo.librarysystem.dto.CategoryDto;
+import com.demo.librarysystem.entity.Book;
+import com.demo.librarysystem.entity.Category;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+@Service
+<span class="fc" id="L19">public class BookServiceImpl implements BookService{</span>
+
+    //inject BookRepository
+    @Autowired
+    private BookRepository bookRepository;
+
+    @Autowired
+    private ModelMapper myMapper;
+
+
+    @Override
+    public List&lt;BookDto&gt; findAll() {
+<span class="fc" id="L31">        return (List&lt;BookDto&gt;) bookRepository.findAll().stream().map(this::convertToDTO).collect(Collectors.toList());</span>
+    }
+
+    @Override
+    public BookDto findById(int id) {
+<span class="fc" id="L36">        Optional&lt;Book&gt; result = bookRepository.findById(id);</span>
+        BookDto book;
+<span class="pc bpc" id="L38" title="1 of 2 branches missed.">        if(result.isPresent())</span>
+        {
+<span class="fc" id="L40">            book= convertToDTO(result.get());</span>
+        }
+        else
+        {
+<span class="nc" id="L44">            throw new BookNotFoundException(&quot;Did not find the book!&quot;);</span>
+        }
+<span class="fc" id="L46">        return book;</span>
+    }
+
+    @Override
+    public void save(Book book) {
+
+     // Book book1 = convertToEntity(book);
+<span class="fc" id="L53">      bookRepository.save(book);</span>
+<span class="fc" id="L54">    }</span>
+
+    @Override
+    public void deleteById(int id) {
+<span class="fc" id="L58">      bookRepository.deleteById(id);</span>
+<span class="fc" id="L59">    }</span>
+
+    @Override
+    public List&lt;Book&gt; findBookByCategory(int categoryId) {
+
+<span class="nc" id="L64">        List&lt;Book&gt; booksByCategory = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L65">        List&lt;Book&gt; books = bookRepository.findAll();</span>
+<span class="nc bnc" id="L66" title="All 2 branches missed.">        for (Book book: books) {</span>
+
+<span class="nc bnc" id="L68" title="All 2 branches missed.">            if(book.getCategory().getId()==categoryId)</span>
+            {
+<span class="nc" id="L70">                booksByCategory.add(book);</span>
+            }
+
+<span class="nc" id="L73">        }</span>
+<span class="nc" id="L74">        return booksByCategory;</span>
+    }
+
+    private BookDto convertToDTO(Book book) {
+<span class="fc" id="L78">        BookDto bookDto = new BookDto();</span>
+<span class="fc" id="L79">        bookDto.setCategory(new Category());</span>
+<span class="fc" id="L80">        myMapper.map(book, bookDto);</span>
+<span class="fc" id="L81">        return bookDto;</span>
+    }
+
+    private Book convertToEntity(BookDto bookDto) {
+<span class="nc" id="L85">        Book book = new Book();</span>
+<span class="nc" id="L86">        book.setCategory(new Category());</span>
+<span class="nc" id="L87">        myMapper.map(bookDto, book);</span>
+<span class="nc" id="L88">        return book;</span>
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

@@ -1,7 +1,7 @@
 package com.demo.librarysystem.service;
 
 import com.demo.librarysystem.dao.CategoryRepository;
-import com.demo.librarysystem.custom.exceptions.CategoryNotFoundException;
+import com.demo.librarysystem.exceptions.CategoryNotFoundException;
 import com.demo.librarysystem.dto.CategoryDto;
 import com.demo.librarysystem.entity.Category;
 import org.modelmapper.ModelMapper;
