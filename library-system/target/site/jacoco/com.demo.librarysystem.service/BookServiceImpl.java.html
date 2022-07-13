@@ -58,34 +58,36 @@ import java.util.stream.Collectors;
 <span class="fc" id="L58">      bookRepository.deleteById(id);</span>
 <span class="fc" id="L59">    }</span>
 
+
+
     @Override
     public List&lt;Book&gt; findBookByCategory(int categoryId) {
 
-<span class="nc" id="L64">        List&lt;Book&gt; booksByCategory = new ArrayList&lt;&gt;();</span>
-<span class="nc" id="L65">        List&lt;Book&gt; books = bookRepository.findAll();</span>
-<span class="nc bnc" id="L66" title="All 2 branches missed.">        for (Book book: books) {</span>
+<span class="nc" id="L66">        List&lt;Book&gt; booksByCategory = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L67">        List&lt;Book&gt; books = bookRepository.findAll();</span>
+<span class="nc bnc" id="L68" title="All 2 branches missed.">        for (Book book: books) {</span>
 
-<span class="nc bnc" id="L68" title="All 2 branches missed.">            if(book.getCategory().getId()==categoryId)</span>
+<span class="nc bnc" id="L70" title="All 2 branches missed.">            if(book.getCategory().getId()==categoryId)</span>
             {
-<span class="nc" id="L70">                booksByCategory.add(book);</span>
+<span class="nc" id="L72">                booksByCategory.add(book);</span>
             }
 
-<span class="nc" id="L73">        }</span>
-<span class="nc" id="L74">        return booksByCategory;</span>
+<span class="nc" id="L75">        }</span>
+<span class="nc" id="L76">        return booksByCategory;</span>
     }
 
     private BookDto convertToDTO(Book book) {
-<span class="fc" id="L78">        BookDto bookDto = new BookDto();</span>
-<span class="fc" id="L79">        bookDto.setCategory(new Category());</span>
-<span class="fc" id="L80">        myMapper.map(book, bookDto);</span>
-<span class="fc" id="L81">        return bookDto;</span>
+<span class="fc" id="L80">        BookDto bookDto = new BookDto();</span>
+<span class="fc" id="L81">        bookDto.setCategory(new Category());</span>
+<span class="fc" id="L82">        myMapper.map(book, bookDto);</span>
+<span class="fc" id="L83">        return bookDto;</span>
     }
 
     private Book convertToEntity(BookDto bookDto) {
-<span class="nc" id="L85">        Book book = new Book();</span>
-<span class="nc" id="L86">        book.setCategory(new Category());</span>
-<span class="nc" id="L87">        myMapper.map(bookDto, book);</span>
-<span class="nc" id="L88">        return book;</span>
+<span class="nc" id="L87">        Book book = new Book();</span>
+<span class="nc" id="L88">        book.setCategory(new Category());</span>
+<span class="nc" id="L89">        myMapper.map(bookDto, book);</span>
+<span class="nc" id="L90">        return book;</span>
     }
 
 

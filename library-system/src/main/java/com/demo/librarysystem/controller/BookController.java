@@ -4,6 +4,7 @@ package com.demo.librarysystem.controller;
 import com.demo.librarysystem.dto.BookDto;
 import com.demo.librarysystem.dto.CategoryDto;
 import com.demo.librarysystem.entity.Book;
+import com.demo.librarysystem.entity.Category;
 import com.demo.librarysystem.service.BookService;
 import com.demo.librarysystem.service.CategoryService;
 import org.modelmapper.ModelMapper;
@@ -30,8 +31,7 @@ public class BookController {
     @Autowired
     private ModelMapper modelMapper;
 
-    private static final String ADD_BOOK_FORM ="add-book-form";
-    private static final String CATEGORIES_ATTRIBUTE ="categories";
+
 
 
 
@@ -67,8 +67,8 @@ public class BookController {
         model.addAttribute("book",bookDto);
 
         List<CategoryDto> categories=categoryService.findAll();
-        model.addAttribute( "CATEGORIES_ATTRIBUTE",categories);
-        return "ADD_BOOK_FORM";
+        model.addAttribute( "categories",categories);
+        return "add-book-form";
     }
 
     @PostMapping("/saveBook")
@@ -78,25 +78,25 @@ public class BookController {
         {
             model.addAttribute("book",bookDto);
             List<CategoryDto> categories=categoryService.findAll();
-            model.addAttribute("CATEGORIES_ATTRIBUTE",categories);
-            return "ADD_BOOK_FORM";
+            model.addAttribute("categories",categories);
+            return "add-book-form";
         }
-        Book book= new Book(bookDto.getName(),bookDto.getAuthor(),bookDto.getQuantity(),bookDto.getCategory());
+        Book book= new Book(bookDto.getName(),bookDto.getAuthor(),bookDto.getQuantity(),bookDto.getCategory(),bookDto.getDetails());
         book.setId(bookDto.getId());
         bookService.save(book);
 
         return "redirect:/listBooks";
     }
 
-    @GetMapping("showFormForUpdateBook")
+    @GetMapping("/showFormForUpdateBook")
     public String showFormForUpdateBook(@RequestParam("bookId") int id, Model model)
     {
         BookDto book=bookService.findById(id);
         model.addAttribute("book",book);
         List<CategoryDto> categories=categoryService.findAll();
-        model.addAttribute("CATEGORIES_ATTRIBUTE",categories);
+        model.addAttribute("categories",categories);
 
-        return "ADD_BOOK_FORM";
+        return "add-book-form";
     }
 
     @GetMapping("/deleteBook")
@@ -104,6 +104,11 @@ public class BookController {
     {
         bookService.deleteById(id);
         return "redirect:/listBooks";
+    }
+
+    @GetMapping("/showDetails")
+    public String showDetails(@RequestParam("bookId")int id) {
+        return "details";
     }
 
     @GetMapping("/searchBook")

@@ -4,6 +4,7 @@
 import com.demo.librarysystem.dto.BookDto;
 import com.demo.librarysystem.dto.CategoryDto;
 import com.demo.librarysystem.entity.Book;
+import com.demo.librarysystem.entity.Category;
 import com.demo.librarysystem.service.BookService;
 import com.demo.librarysystem.service.CategoryService;
 import org.modelmapper.ModelMapper;
@@ -19,7 +20,7 @@ import java.util.Optional;
 
 
 @Controller
-<span class="fc" id="L22">public class BookController {</span>
+<span class="fc" id="L23">public class BookController {</span>
 
     @Autowired
     private BookService bookService;
@@ -40,69 +41,74 @@ import java.util.Optional;
 
         List&lt;BookDto&gt; books1;
 
-<span class="nc bnc" id="L43" title="All 2 branches missed.">        if(categoryId.isEmpty())</span>
+<span class="nc bnc" id="L44" title="All 2 branches missed.">        if(categoryId.isEmpty())</span>
         {
-<span class="nc" id="L45">             books1=bookService.findAll();</span>
-<span class="nc" id="L46">            model.addAttribute(&quot;books&quot;,books1);</span>
+<span class="nc" id="L46">             books1=bookService.findAll();</span>
+<span class="nc" id="L47">            model.addAttribute(&quot;books&quot;,books1);</span>
         }
         else
         {
-<span class="nc" id="L50">             books = bookService.findBookByCategory(categoryId.get().intValue());</span>
-<span class="nc" id="L51">            model.addAttribute(&quot;books&quot;,books);</span>
+<span class="nc" id="L51">             books = bookService.findBookByCategory(categoryId.get().intValue());</span>
+<span class="nc" id="L52">            model.addAttribute(&quot;books&quot;,books);</span>
 
         }
 
-<span class="nc" id="L55">        List&lt;CategoryDto&gt; categories=categoryService.findAll();</span>
-<span class="nc" id="L56">        model.addAttribute(&quot;categories&quot;,categories);</span>
+<span class="nc" id="L56">        List&lt;CategoryDto&gt; categories=categoryService.findAll();</span>
+<span class="nc" id="L57">        model.addAttribute(&quot;CATEGORIES_ATTRIBUTE&quot;,categories);</span>
 
 
-<span class="nc" id="L59">        return &quot;list-books&quot;;</span>
+<span class="nc" id="L60">        return &quot;list-books&quot;;</span>
     }
 
     @GetMapping(&quot;/addBookForm&quot;)
     public String addBook(Model model)
     {
-<span class="nc" id="L65">        BookDto bookDto = new BookDto();</span>
-<span class="nc" id="L66">        model.addAttribute(&quot;book&quot;,bookDto);</span>
+<span class="nc" id="L66">        BookDto bookDto = new BookDto();</span>
+<span class="nc" id="L67">        model.addAttribute(&quot;book&quot;,bookDto);</span>
 
-<span class="nc" id="L68">        List&lt;CategoryDto&gt; categories=categoryService.findAll();</span>
-<span class="nc" id="L69">        model.addAttribute( &quot;categories&quot;,categories);</span>
-<span class="nc" id="L70">        return &quot;add-book-form&quot;;</span>
+<span class="nc" id="L69">        List&lt;CategoryDto&gt; categories=categoryService.findAll();</span>
+<span class="nc" id="L70">        model.addAttribute( &quot;categories&quot;,categories);</span>
+<span class="nc" id="L71">        return &quot;add-book-form&quot;;</span>
     }
 
     @PostMapping(&quot;/saveBook&quot;)
-    public String saveBook(@Valid @ModelAttribute(&quot;book&quot;) Book bookDto, BindingResult bindingResult,Model model)
+    public String saveBook(@Valid @ModelAttribute(&quot;book&quot;) BookDto bookDto, BindingResult bindingResult,Model model)
     {
-<span class="nc bnc" id="L76" title="All 2 branches missed.">        if(bindingResult.hasErrors())</span>
+<span class="nc bnc" id="L77" title="All 2 branches missed.">        if(bindingResult.hasErrors())</span>
         {
-<span class="nc" id="L78">            model.addAttribute(&quot;book&quot;,bookDto);</span>
-<span class="nc" id="L79">            List&lt;CategoryDto&gt; categories=categoryService.findAll();</span>
-<span class="nc" id="L80">            model.addAttribute(&quot;categories&quot;,categories);</span>
-<span class="nc" id="L81">            return &quot;add-book-form&quot;;</span>
+<span class="nc" id="L79">            model.addAttribute(&quot;book&quot;,bookDto);</span>
+<span class="nc" id="L80">            List&lt;CategoryDto&gt; categories=categoryService.findAll();</span>
+<span class="nc" id="L81">            model.addAttribute(&quot;categories&quot;,categories);</span>
+<span class="nc" id="L82">            return &quot;add-book-form&quot;;</span>
         }
-<span class="nc" id="L83">        Book book= new Book(bookDto.getName(),bookDto.getAuthor(),bookDto.getQuantity(),bookDto.getCategory());</span>
-<span class="nc" id="L84">        book.setId(bookDto.getId());</span>
-<span class="nc" id="L85">        bookService.save(book);</span>
+<span class="nc" id="L84">        Book book= new Book(bookDto.getName(),bookDto.getAuthor(),bookDto.getQuantity(),bookDto.getCategory(),bookDto.getDetails());</span>
+<span class="nc" id="L85">        book.setId(bookDto.getId());</span>
+<span class="nc" id="L86">        bookService.save(book);</span>
 
-<span class="nc" id="L87">        return &quot;redirect:/listBooks&quot;;</span>
+<span class="nc" id="L88">        return &quot;redirect:/listBooks&quot;;</span>
     }
 
-    @GetMapping(&quot;showFormForUpdateBook&quot;)
+    @GetMapping(&quot;/showFormForUpdateBook&quot;)
     public String showFormForUpdateBook(@RequestParam(&quot;bookId&quot;) int id, Model model)
     {
-<span class="nc" id="L93">        BookDto book=bookService.findById(id);</span>
-<span class="nc" id="L94">        model.addAttribute(&quot;book&quot;,book);</span>
-<span class="nc" id="L95">        List&lt;CategoryDto&gt; categories=categoryService.findAll();</span>
-<span class="nc" id="L96">        model.addAttribute(&quot;categories&quot;,categories);</span>
+<span class="nc" id="L94">        BookDto book=bookService.findById(id);</span>
+<span class="nc" id="L95">        model.addAttribute(&quot;book&quot;,book);</span>
+<span class="nc" id="L96">        List&lt;CategoryDto&gt; categories=categoryService.findAll();</span>
+<span class="nc" id="L97">        model.addAttribute(&quot;categories&quot;,categories);</span>
 
-<span class="nc" id="L98">        return &quot;add-book-form&quot;;</span>
+<span class="nc" id="L99">        return &quot;add-book-form&quot;;</span>
     }
 
     @GetMapping(&quot;/deleteBook&quot;)
     public String deleteBook(@RequestParam(&quot;bookId&quot;) int id)
     {
-<span class="nc" id="L104">        bookService.deleteById(id);</span>
-<span class="nc" id="L105">        return &quot;redirect:/listBooks&quot;;</span>
+<span class="nc" id="L105">        bookService.deleteById(id);</span>
+<span class="nc" id="L106">        return &quot;redirect:/listBooks&quot;;</span>
+    }
+
+    @GetMapping(&quot;/showDetails&quot;)
+    public String showDetails(@RequestParam(&quot;bookId&quot;)int id) {
+<span class="nc" id="L111">        return &quot;details&quot;;</span>
     }
 
     @GetMapping(&quot;/searchBook&quot;)
@@ -114,7 +120,7 @@ import java.util.Optional;
         model.addAttribute(&quot;books&quot;, books1);
 
      */
-<span class="nc" id="L117">        return &quot;search&quot;;</span>
+<span class="nc" id="L123">        return &quot;search&quot;;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

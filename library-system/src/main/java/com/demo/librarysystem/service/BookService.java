@@ -16,6 +16,7 @@ public interface BookService {
 
      void deleteById(int id);
 
+
      List<Book> findBookByCategory(int categoryId);
 
 }

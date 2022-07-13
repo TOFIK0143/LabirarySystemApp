@@ -1,38 +1,38 @@
 
-½com.demo.librarysystem.controller.BookController#saveBook(Lcom/demo/librarysystem/entity/Book;Lorg/springframework/validation/BindingResult;Lorg/springframework/ui/Model;)Ljava/lang/String;~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaJ J("startingBlock*¹
+½com.demo.librarysystem.controller.BookController#saveBook(Lcom/demo/librarysystem/dto/BookDto;Lorg/springframework/validation/BindingResult;Lorg/springframework/ui/Model;)Ljava/lang/String;~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaK K("startingBlock*¹
 2~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaN N(•
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaO O(•
 ’
 ~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaN N(."
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaO O(."
 %1org.springframework.ui.Model"__mapSet*'
 %
 modelorg.springframework.ui.Model*
 book*/
 -
-bookDto"com.demo.librarysystem.entity.BookŠ
+bookDto"com.demo.librarysystem.dto.BookDtoŠ
 ‡
 ~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaO) O(84
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaP) P(84
 %2.com.demo.librarysystem.service.CategoryService"__id*I*G2
 0com.demo.librarysystem.controller.BookController"
 categoryService¦£
 ~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaO) O(B
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaP) P(B
 %3java.util.List"Hcom.demo.librarysystem.service.CategoryService#findAll()Ljava/util/List;*6
 4
 %2.com.demo.librarysystem.service.CategoryService2	findAll()¿
 ¼
 ~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaO O(C
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaP P(C
 
 categoriesjava.util.List"__id*
 
 %3java.util.ListŠ
 ‡
 ~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaP P(7"
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaQ Q(7"
 %4org.springframework.ui.Model"__mapSet*'
 %
 modelorg.springframework.ui.Model*
@@ -43,50 +43,57 @@ categories*
 categoriesjava.util.List€
 ý
 ~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaQ Q("
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaR R("
 %5"template!add-book-form*4"2
 0com.demo.librarysystem.controller.BookController*'
 %
 modelorg.springframework.ui.Model"“
 ~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaQ Q(#
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaR R(#
 add-book-form*¢
 3~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaL L(”‘
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaM M(”‘
 ~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaL L($
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaM M($
 %0boolean"2org.springframework.validation.Errors#hasErrors()Z*?
 =
 bindingResult,org.springframework.validation.BindingResult2hasErrors()*
 2
-1*ƒ
+1*ê
 startingBlock~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaJ J(pf
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaK K(sf
 d
 
 __unknown_file (
-%12"__id*;*9
+%11"__id*;*9
 -
-bookDto"com.demo.librarysystem.entity.Book"
+bookDto"com.demo.librarysystem.dto.BookDto"
 authorh
 f
 
 __unknown_file (
-%13"__id*=*;
+%12"__id*=*;
 -
-bookDto"com.demo.librarysystem.entity.Book"
+bookDto"com.demo.librarysystem.dto.BookDto"
 
-categoryd
+categoryg
+e
+
+__unknown_file (
+%13"__id*<*:
+-
+bookDto"com.demo.librarysystem.dto.BookDto"	
+detailsd
 b
 
 __unknown_file (
 %14"__id*9*7
 -
-bookDto"com.demo.librarysystem.entity.Book"
+bookDto"com.demo.librarysystem.dto.BookDto"
 name»
 ¸
 ~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaJ J(!
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaK K(!
 %15"
 __annotate*
 javax.validation.Valid*
@@ -94,44 +101,43 @@ __annotate*
 %13Û
 Ø
 ~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaJ" J(9
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaK" K(9
 %16"
 __annotate*:8
 6org.springframework.web.bind.annotation.ModelAttribute*
 
-%13à
-Ý
+%13ß
+Ü
 ~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaJ? J(F;
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaKB K(I:
 -
-bookDto"com.demo.librarysystem.entity.Book"
-
-category"__annotation*
+bookDto"com.demo.librarysystem.dto.BookDto"	
+details"__annotation*
 
 %15*
 
 %16»
 ¸
 ~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaJ J(!
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaK K(!
 %17"
 __annotate*
 javax.validation.Valid*
 
-%12Û
+%11Û
 Ø
 ~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaJ" J(9
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaK" K(9
 %18"
 __annotate*:8
 6org.springframework.web.bind.annotation.ModelAttribute*
 
-%12Þ
+%11Þ
 Û
 ~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaJ? J(F9
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaKB K(I9
 -
-bookDto"com.demo.librarysystem.entity.Book"
+bookDto"com.demo.librarysystem.dto.BookDto"
 author"__annotation*
 
 %17*
@@ -139,7 +145,7 @@ t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/library
 %18»
 ¸
 ~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaJ J(!
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaK K(!
 %19"
 __annotate*
 javax.validation.Valid*
@@ -147,7 +153,7 @@ __annotate*
 %14Û
 Ø
 ~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaJ" J(9
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaK" K(9
 %20"
 __annotate*:8
 6org.springframework.web.bind.annotation.ModelAttribute*
@@ -155,69 +161,92 @@ __annotate*:8
 %14Ü
 Ù
 ~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaJ? J(F7
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaKB K(I7
 -
-bookDto"com.demo.librarysystem.entity.Book"
+bookDto"com.demo.librarysystem.dto.BookDto"
 name"__annotation*
 
 %19*
 
-%20½º
+%20»
+¸
 ~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaJd J(o%
-modelorg.springframework.ui.Model"java.util.HashMap*
-3*Þ
-1~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaS S(#—”
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaK K(!
+%21"
+__annotate*
+javax.validation.Valid*
+
+%12Û
+Ø
 ~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaS S(-
-%6java.lang.String">com.demo.librarysystem.entity.Book#getName()Ljava/lang/String;*/
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaK" K(9
+%22"
+__annotate*:8
+6org.springframework.web.bind.annotation.ModelAttribute*
+
+%12à
+Ý
+~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaKB K(I;
 -
-bookDto"com.demo.librarysystem.entity.Book2	getName()ÑÎ
+bookDto"com.demo.librarysystem.dto.BookDto"
+
+category"__annotation*
+
+%21*
+
+%22½º
 ~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaS S((
-%7"com.demo.librarysystem.entity.Book""com.demo.librarysystem.entity.Bookâ
-ß
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaKg K(r%
+modelorg.springframework.ui.Model"java.util.HashMap*
+3*Î
+1~
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaT T(#ÑÎ
 ~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaS S(n
-%8"ycom.demo.librarysystem.entity.Book#<init>(Ljava/lang/String;Ljava/lang/String;ILcom/demo/librarysystem/entity/Category;)V**
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaT T((
+%6"com.demo.librarysystem.entity.Book""com.demo.librarysystem.entity.Bookì
+é
+
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaT T(ƒ
+%7"‹com.demo.librarysystem.entity.Book#<init>(Ljava/lang/String;Ljava/lang/String;ILcom/demo/librarysystem/entity/Category;Ljava/lang/String;)V**
 (
-%7"com.demo.librarysystem.entity.Book*
-
-%6java.lang.String*
+%6"com.demo.librarysystem.entity.Book*
 ""*
 ""*
-""á
-Þ
-~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaS S(o*
+""*
+""*
+""â
+ß
+
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaT T(„*
 book"com.demo.librarysystem.entity.Book"__id**
 (
-%7"com.demo.librarysystem.entity.Book‚
+%6"com.demo.librarysystem.entity.Book‚
 ÿ
 ~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaU U(0
-%9*com.demo.librarysystem.service.BookService"__id*E*C2
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaV V(0
+%8*com.demo.librarysystem.service.BookService"__id*E*C2
 0com.demo.librarysystem.controller.BookController"
-bookServiceöó
+bookServiceõò
 ~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaU U(
-%10void"Vcom.demo.librarysystem.service.BookService#save(Lcom/demo/librarysystem/entity/Book;)V*2
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaV V(
+
+%9void"Vcom.demo.librarysystem.service.BookService#save(Lcom/demo/librarysystem/entity/Book;)V*2
 0
-%9*com.demo.librarysystem.service.BookService*,
+%8*com.demo.librarysystem.service.BookService*,
 *
 book"com.demo.librarysystem.entity.Book2*save(Lcom/demo/librarysystem/entity/Book;)‡
 „
 ~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaW W($
-%11"template!redirect:/listBooks*4"2
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaX X($
+%10"template!redirect:/listBooks*4"2
 0com.demo.librarysystem.controller.BookController*'
 %
 modelorg.springframework.ui.Model"™
 ~
-t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaW W(%
+t/home/tofiM/Zemoso/LABRARY-SYSTEM/library-system/src/main/java/com/demo/librarysystem/controller/BookController.javaX X(%
 redirect:/listBooks:-
-bookDto"com.demo.librarysystem.entity.Book:=
+bookDto"com.demo.librarysystem.dto.BookDto:=
 bindingResult,org.springframework.validation.BindingResult:%
 modelorg.springframework.ui.ModelB42
 0com.demo.librarysystem.controller.BookController

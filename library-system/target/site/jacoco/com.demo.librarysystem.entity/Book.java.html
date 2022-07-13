@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 
-<span class="nc bnc" id="L15" title="All 34 branches missed.">@Data</span>
+<span class="nc bnc" id="L15" title="All 42 branches missed.">@Data</span>
 <span class="fc" id="L16">@NoArgsConstructor</span>
 @Entity
 @Table(name = &quot;book&quot;)
@@ -47,22 +47,25 @@ public class Book {
 <span class="fc" id="L47">    private Category category;</span>
 
 
-
+    @Size(min=2,message = &quot;please provide some details&quot;)
+    @Column(name = &quot;details&quot;)
+<span class="fc" id="L52">    private String details;</span>
 
     public String getName() {
-<span class="fc" id="L53">        return name;</span>
+<span class="fc" id="L55">        return name;</span>
     }
 
     public void setName(String name) {
-<span class="nc" id="L57">        this.name = name;</span>
-<span class="nc" id="L58">    }</span>
+<span class="nc" id="L59">        this.name = name;</span>
+<span class="nc" id="L60">    }</span>
 
-<span class="fc" id="L60">    public Book(String name, String author, int quantity, Category category) {</span>
-<span class="fc" id="L61">        this.name = name;</span>
-<span class="fc" id="L62">        this.author = author;</span>
-<span class="fc" id="L63">        this.quantity = quantity;</span>
-<span class="fc" id="L64">        this.category = category;</span>
-<span class="fc" id="L65">    }</span>
+<span class="fc" id="L62">    public Book(String name, String author, int quantity, Category category, String details) {</span>
+<span class="fc" id="L63">        this.name = name;</span>
+<span class="fc" id="L64">        this.author = author;</span>
+<span class="fc" id="L65">        this.quantity = quantity;</span>
+<span class="fc" id="L66">        this.category = category;</span>
+<span class="fc" id="L67">        this.details = details;</span>
+<span class="fc" id="L68">    }</span>
 
 
 

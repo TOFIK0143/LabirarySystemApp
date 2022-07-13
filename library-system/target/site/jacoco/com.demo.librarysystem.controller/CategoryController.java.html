@@ -48,7 +48,7 @@ import java.util.List;
     }
 
     @PostMapping(&quot;/saveCategory&quot;)
-    public String saveCategory(@Valid @ModelAttribute(&quot;category&quot;) Category category, BindingResult bindingResult)
+    public String saveCategory(@Valid @ModelAttribute(&quot;category&quot;) CategoryDto CategoryDto, BindingResult bindingResult)
     {
 <span class="nc bnc" id="L53" title="All 2 branches missed.">        if(bindingResult.hasErrors())</span>
         {
@@ -56,13 +56,13 @@ import java.util.List;
         }
 <span class="nc" id="L57">        List&lt;CategoryDto&gt; categories = categoryService.findAll();</span>
 <span class="nc bnc" id="L58" title="All 2 branches missed.">        for (CategoryDto tempCategory: categories) {</span>
-<span class="nc bnc" id="L59" title="All 2 branches missed.">            if (tempCategory.getName().equals(category.getName()))</span>
+<span class="nc bnc" id="L59" title="All 2 branches missed.">            if (tempCategory.getName().equals(CategoryDto.getName()))</span>
             {
 <span class="nc" id="L61">                return &quot;error-already-added&quot;;</span>
             }
 <span class="nc" id="L63">        }</span>
-<span class="nc" id="L64">        Category category1 = new Category(category.getName());</span>
-<span class="nc" id="L65">        category1.setId(category.getId());</span>
+<span class="nc" id="L64">        Category category1 = new Category(CategoryDto.getName());</span>
+<span class="nc" id="L65">        category1.setId(CategoryDto.getId());</span>
 <span class="nc" id="L66">        categoryService.save(category1);</span>
 
 <span class="nc" id="L68">        return &quot;redirect:/listCategories&quot;;</span>

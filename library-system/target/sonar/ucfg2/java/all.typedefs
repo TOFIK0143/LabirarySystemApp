@@ -59,9 +59,9 @@ getCause()3java.lang.Throwable#getCause()Ljava/lang/Throwable;e
 1<init>(Ljava/lang/String;Ljava/lang/Throwable;ZZ)Mjava.lang.RuntimeException#<init>(Ljava/lang/String;Ljava/lang/Throwable;ZZ)VZ
 <init>(Ljava/lang/Throwable;)9java.lang.RuntimeException#<init>(Ljava/lang/Throwable;)VÐ
 ;com.demo.librarysystem.exceptions.CategoryNotFoundExceptionjava.lang.RuntimeExceptionu
-<init>(Ljava/lang/String;)Wcom.demo.librarysystem.exceptions.CategoryNotFoundException#<init>(Ljava/lang/String;)V‹
-"com.demo.librarysystem.dto.BookDtojava.lang.ObjectÒ
-U<init>(Ljava/lang/String;Ljava/lang/String;ILcom/demo/librarysystem/entity/Category;)ycom.demo.librarysystem.dto.BookDto#<init>(Ljava/lang/String;Ljava/lang/String;ILcom/demo/librarysystem/entity/Category;)Và
+<init>(Ljava/lang/String;)Wcom.demo.librarysystem.exceptions.CategoryNotFoundException#<init>(Ljava/lang/String;)V°
+"com.demo.librarysystem.dto.BookDtojava.lang.Object÷
+g<init>(Ljava/lang/String;Ljava/lang/String;ILcom/demo/librarysystem/entity/Category;Ljava/lang/String;)‹com.demo.librarysystem.dto.BookDto#<init>(Ljava/lang/String;Ljava/lang/String;ILcom/demo/librarysystem/entity/Category;Ljava/lang/String;)Và
 /com.demo.librarysystem.LibrarySystemApplicationjava.lang.ObjectE
 <init>()9com.demo.librarysystem.LibrarySystemApplication#<init>()Vk
 modelMapper()Zcom.demo.librarysystem.LibrarySystemApplication#modelMapper()Lorg/modelmapper/ModelMapper;g
@@ -195,7 +195,7 @@ FsetEnvironment(Lorg/springframework/core/env/ConfigurableEnvironment;)rorg.spr
 deleteCategory(I)Xcom.demo.librarysystem.controller.CategoryController#deleteCategory(I)Ljava/lang/String;©
 /addCategoryForm(Lorg/springframework/ui/Model;)vcom.demo.librarysystem.controller.CategoryController#addCategoryForm(Lorg/springframework/ui/Model;)Ljava/lang/String;J
 <init>()>com.demo.librarysystem.controller.CategoryController#<init>()V”
-dsaveCategory(Lcom/demo/librarysystem/entity/Category;Lorg/springframework/validation/BindingResult;)«com.demo.librarysystem.controller.CategoryController#saveCategory(Lcom/demo/librarysystem/entity/Category;Lorg/springframework/validation/BindingResult;)Ljava/lang/String;§
+dsaveCategory(Lcom/demo/librarysystem/dto/CategoryDto;Lorg/springframework/validation/BindingResult;)«com.demo.librarysystem.controller.CategoryController#saveCategory(Lcom/demo/librarysystem/dto/CategoryDto;Lorg/springframework/validation/BindingResult;)Ljava/lang/String;§
 .listCategories(Lorg/springframework/ui/Model;)ucom.demo.librarysystem.controller.CategoryController#listCategories(Lorg/springframework/ui/Model;)Ljava/lang/String;À
 :showFormForUpdateCategory(ILorg/springframework/ui/Model;)com.demo.librarysystem.controller.CategoryController#showFormForUpdateCategory(ILorg/springframework/ui/Model;)Ljava/lang/String;B
 .com.demo.librarysystem.service.CategoryServicejava.lang.Object0
@@ -465,19 +465,21 @@ iterator()2java.util.ArrayList#iterator()Ljava/util/Iterator;I
 findById(I)fcom.demo.librarysystem.service.CategoryServiceImpl#findById(I)Lcom/demo/librarysystem/dto/CategoryDto;”
 .save(Lcom/demo/librarysystem/entity/Category;)bcom.demo.librarysystem.service.CategoryServiceImpl#save(Lcom/demo/librarysystem/entity/Category;)VÌ
 6convertToDTO(Lcom/demo/librarysystem/entity/Category;)‘com.demo.librarysystem.service.CategoryServiceImpl#convertToDTO(Lcom/demo/librarysystem/entity/Category;)Lcom/demo/librarysystem/dto/CategoryDto;x
--com.demo.librarysystem.dao.CategoryRepositoryjava.lang.Object5org.springframework.data.jpa.repository.JpaRepository¸
+-com.demo.librarysystem.dao.CategoryRepositoryjava.lang.Object5org.springframework.data.jpa.repository.JpaRepositoryÝ
 "com.demo.librarysystem.entity.Bookjava.lang.Object^
 setName(Ljava/lang/String;)?com.demo.librarysystem.entity.Book#setName(Ljava/lang/String;)VK
-	getName()>com.demo.librarysystem.entity.Book#getName()Ljava/lang/String;Ò
-U<init>(Ljava/lang/String;Ljava/lang/String;ILcom/demo/librarysystem/entity/Category;)ycom.demo.librarysystem.entity.Book#<init>(Ljava/lang/String;Ljava/lang/String;ILcom/demo/librarysystem/entity/Category;)V¢	
-0com.demo.librarysystem.controller.BookControllerjava.lang.Objecta
+	getName()>com.demo.librarysystem.entity.Book#getName()Ljava/lang/String;÷
+g<init>(Ljava/lang/String;Ljava/lang/String;ILcom/demo/librarysystem/entity/Category;Ljava/lang/String;)‹com.demo.librarysystem.entity.Book#<init>(Ljava/lang/String;Ljava/lang/String;ILcom/demo/librarysystem/entity/Category;Ljava/lang/String;)V‡
+
+0com.demo.librarysystem.controller.BookControllerjava.lang.Object¼
+zsaveBook(Lcom/demo/librarysystem/dto/BookDto;Lorg/springframework/validation/BindingResult;Lorg/springframework/ui/Model;)½com.demo.librarysystem.controller.BookController#saveBook(Lcom/demo/librarysystem/dto/BookDto;Lorg/springframework/validation/BindingResult;Lorg/springframework/ui/Model;)Ljava/lang/String;a
 deleteBook(I)Pcom.demo.librarysystem.controller.BookController#deleteBook(I)Ljava/lang/String;_
 searchBook()Ocom.demo.librarysystem.controller.BookController#searchBook()Ljava/lang/String;F
 <init>():com.demo.librarysystem.controller.BookController#<init>()V³
-6showFormForUpdateBook(ILorg/springframework/ui/Model;)ycom.demo.librarysystem.controller.BookController#showFormForUpdateBook(ILorg/springframework/ui/Model;)Ljava/lang/String;¼
-zsaveBook(Lcom/demo/librarysystem/entity/Book;Lorg/springframework/validation/BindingResult;Lorg/springframework/ui/Model;)½com.demo.librarysystem.controller.BookController#saveBook(Lcom/demo/librarysystem/entity/Book;Lorg/springframework/validation/BindingResult;Lorg/springframework/ui/Model;)Ljava/lang/String;Â
+6showFormForUpdateBook(ILorg/springframework/ui/Model;)ycom.demo.librarysystem.controller.BookController#showFormForUpdateBook(ILorg/springframework/ui/Model;)Ljava/lang/String;Â
 =listBooks(Ljava/util/Optional;Lorg/springframework/ui/Model;)€com.demo.librarysystem.controller.BookController#listBooks(Ljava/util/Optional;Lorg/springframework/ui/Model;)Ljava/lang/String;•
-'addBook(Lorg/springframework/ui/Model;)jcom.demo.librarysystem.controller.BookController#addBook(Lorg/springframework/ui/Model;)Ljava/lang/String;(
+'addBook(Lorg/springframework/ui/Model;)jcom.demo.librarysystem.controller.BookController#addBook(Lorg/springframework/ui/Model;)Ljava/lang/String;c
+showDetails(I)Qcom.demo.librarysystem.controller.BookController#showDetails(I)Ljava/lang/String;(
 java.lang.Comparablejava.lang.Object0
 java.lang.constant.Constablejava.lang.Object3
 java.lang.constant.ConstantDescjava.lang.ObjectÀ

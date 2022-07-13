@@ -3,5 +3,5 @@ projectKey=TofikZeMoSo_Library-System
 serverUrl=https://sonarcloud.io
 serverVersion=8.0.0.28905
 dashboardUrl=https://sonarcloud.io/dashboard?id=TofikZeMoSo_Library-System
-ceTaskId=AYCoUeQ3NQINETUuPjQg
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYCoUeQ3NQINETUuPjQg
+ceTaskId=AYCu6HSnLI-4-O0nlgP9
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYCu6HSnLI-4-O0nlgP9

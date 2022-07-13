@@ -47,7 +47,9 @@ public class Book {
     private Category category;
 
 
-
+    @Size(min=2,message = "please provide some details")
+    @Column(name = "details")
+    private String details;
 
     public String getName() {
         return name;
@@ -57,11 +59,12 @@ public class Book {
         this.name = name;
     }
 
-    public Book(String name, String author, int quantity, Category category) {
+    public Book(String name, String author, int quantity, Category category, String details) {
         this.name = name;
         this.author = author;
         this.quantity = quantity;
         this.category = category;
+        this.details = details;
     }
 
 

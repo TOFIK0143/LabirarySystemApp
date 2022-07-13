@@ -41,8 +41,8 @@ class BookServiceTest {
     void findAllBooksTest() {
         when(bookRepository.findAll()).thenReturn(
                 Stream.of(
-                        new Book("Time", "HG.Williams", 35, new Category("Science")),
-                        new Book("Stars", "Brian Greene", 24, new Category("Astronomy"))
+                        new Book("Time", "HG.Williams", 35, new Category("Science"),"This is book of Science"),
+                        new Book("Stars", "Brian Greene", 24, new Category("Astronomy"),"This is book of Astronomy")
                 ).collect(Collectors.toList()));
 
         Assertions.assertEquals(2, bookRepository.findAll().size());
@@ -53,7 +53,7 @@ class BookServiceTest {
     void findByIdBookTest() {
         int id = 1;
         when(bookRepository.findById(id)).thenReturn(
-                Optional.of(new Book("DBMS", "John", 45, new Category("Computers")))
+                Optional.of(new Book("DBMS", "John", 45, new Category("Computers"),"This is Book of Computers"))
         );
 
         Assertions.assertEquals("DBMS", bookService.findById(id).getName());
@@ -61,7 +61,7 @@ class BookServiceTest {
 
     @Test
     void saveBookTest() {
-        Book book = new Book("DBMS", "John", 45, new Category("Computers"));
+        Book book = new Book("DBMS", "John", 45, new Category("Computers"),"This is book of Computers");
         bookRepository.save(book);
         verify(bookRepository, times(1)).save(book);
     }

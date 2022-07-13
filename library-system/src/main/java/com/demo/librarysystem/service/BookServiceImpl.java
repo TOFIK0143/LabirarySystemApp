@@ -58,6 +58,8 @@ public class BookServiceImpl implements BookService{
       bookRepository.deleteById(id);
     }
 
+
+
     @Override
     public List<Book> findBookByCategory(int categoryId) {
 
@@ -81,12 +83,12 @@ public class BookServiceImpl implements BookService{
         return bookDto;
     }
 
-    private Book convertToEntity(BookDto bookDto) {
+   /* private Book convertToEntity(BookDto bookDto) {
         Book book = new Book();
         book.setCategory(new Category());
         myMapper.map(bookDto, book);
         return book;
-    }
+    } */
 
 
 }

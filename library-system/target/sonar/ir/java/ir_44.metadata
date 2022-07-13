@@ -1,3 +1,3 @@
-com.demo.librarysystem.controller.BookController#saveBook(Lcom/demo/librarysystem/entity/Book;Lorg/springframework/validation/BindingResult;Lorg/springframework/ui/Model;)Ljava/lang/String;
+com.demo.librarysystem.controller.BookController#saveBook(Lcom/demo/librarysystem/dto/BookDto;Lorg/springframework/validation/BindingResult;Lorg/springframework/ui/Model;)Ljava/lang/String;
 com.demo.librarysystem.entity.Book#instance-init#
-com.demo.librarysystem.entity.Book#<init>(Ljava/lang/String;Ljava/lang/String;ILcom/demo/librarysystem/entity/Category;)V
+com.demo.librarysystem.entity.Book#<init>(Ljava/lang/String;Ljava/lang/String;ILcom/demo/librarysystem/entity/Category;Ljava/lang/String;)V

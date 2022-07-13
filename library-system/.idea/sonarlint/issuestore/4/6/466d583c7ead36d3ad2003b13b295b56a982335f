@@ -1,0 +1,7 @@
+
+B
+java:S1905"'Remove this unnecessary cast to "List".(¦È‘™þÿÿÿÿ
+V	java:S1254"<This block of commented-out lines of code should be removed.(±œ±ÿÿÿÿÿ
+V	java:S125V"<This block of commented-out lines of code should be removed.(‹çê¹þÿÿÿÿ
+^
+java:S1128"CRemove this unused import 'com.demo.librarysystem.dto.CategoryDto'.(Øµ•äûÿÿÿÿ
